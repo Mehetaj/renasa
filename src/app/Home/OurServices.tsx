@@ -32,7 +32,7 @@ const OurServices = () => {
         <Container>
             <div className="text-center mt-10">
                 <p className="capitalize text-red-900"> <WbSunnyIcon /> OUR SERVICES</p>
-                <h2 className="text-6xl font-semibold my-5">Comprehensive Renewable <br /> Energy Solutions</h2>
+                <h2 className="text-6xl my-5">Comprehensive Renewable <br /> Energy Solutions</h2>
                 <p className="text-xl">
                     We offer a range of services to help you take advantage of renewable energy <br /> and reduce your carbon footprint.
                 </p>
