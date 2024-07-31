@@ -28,36 +28,36 @@ const TopNavBar: React.FC = () => {
               </Typography>
             </Grid>
           </Grid>
-          <Grid item xs={12} sm="auto" container justifyContent={{ xs: 'center', sm: 'flex-end' }} spacing={1}>
-            <Grid item>
+          <Grid item xs={12} sm="auto" container justifyContent={{ xs: 'center', sm: 'flex-end' }}>
+            <Grid item className='mx-[-10px]'>
               <Button color="inherit">
                 <Link target='_blank' href="https://www.facebook.com">
                   <FacebookIcon />
                 </Link>
               </Button>
             </Grid>
-            <Grid item>
+            <Grid item className='mx-[-10px]'>
               <Button color="inherit">
                 <Link target='_blank' href="https://www.x.com">
                   <TwitterIcon />
                 </Link>
               </Button>
             </Grid>
-            <Grid item>
+            <Grid item className='mx-[-10px]'>
               <Button color="inherit">
                 <Link target='_blank' href="https://www.linkedin.com">
                   <LinkedinIcon />
                 </Link>
               </Button>
             </Grid>
-            <Grid item>
+            <Grid item className='mx-[-10px]'>
               <Button color="inherit">
                 <Link target='_blank' href="tel:01644394337">
                   <CallIcon />
                 </Link>
               </Button>
             </Grid>
-            <Grid item>
+            <Grid item className='mx-[-10px]'>
               <Button color="inherit">
                 <Link target='_blank' href="mailto:mehetajkhandaker@gmail.com">
                   <MailIcon />

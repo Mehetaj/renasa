@@ -10,9 +10,6 @@ const Contact = () => {
         <Container>
             <Grid container spacing={5} alignItems="center" mt={6}>
                 <Grid item xs={12} md={6}>
-                    <Typography variant="h6" color="firebrick" gutterBottom>
-                        <WbSunnyIcon /> CONTACT
-                    </Typography>
                     <Typography className='my-4' variant="h2" gutterBottom>
                         Join the Clean Energy Revolution Today!
                     </Typography>

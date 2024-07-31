@@ -1,13 +1,17 @@
 "use client"
-import { Container } from "@mui/material";
+import { Container, Grid, Typography, Box, useMediaQuery, useTheme } from "@mui/material";
 import WbSunnyIcon from '@mui/icons-material/WbSunny';
-import image1 from '@/Images/home_services/image1.jpg'
-import image2 from '@/Images/home_services/image2.jpg'
-import image3 from '@/Images/home_services/image3.jpg'
+import image1 from '@/Images/home_services/image1.jpg';
+import image2 from '@/Images/home_services/image2.jpg';
+import image3 from '@/Images/home_services/image3.jpg';
 import Image from "next/image";
 import EastIcon from '@mui/icons-material/East';
 
 const OurServices = () => {
+
+    const theme = useTheme();
+    const isTablet = useMediaQuery(theme.breakpoints.down('md'));
+    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
     // Fake Data
     const services = [
@@ -30,46 +34,53 @@ const OurServices = () => {
 
     return (
         <Container>
-            <div className="text-center mt-10">
-                <p className="capitalize text-red-900"> <WbSunnyIcon /> OUR SERVICES</p>
-                <h2 className="text-6xl my-5">Comprehensive Renewable <br /> Energy Solutions</h2>
-                <p className="text-xl">
+            <Box className="text-center mt-10">
+                <Typography variant={isMobile ? "h4" : (isTablet ? "h2" : "h2")}  className="my-5">Comprehensive Renewable <br /> Energy Solutions</Typography>
+                <Typography variant="body1" className="text-xl">
                     We offer a range of services to help you take advantage of renewable energy <br /> and reduce your carbon footprint.
-                </p>
-            </div>
-            <div className="mt-10 grid grid-cols-3">
+                </Typography>
+            </Box>
+            <Grid container spacing={3} className="mt-10">
                 {
-                    services?.map((service) => {
-                        return (
-                            <div>
-                                <Image className="w-[365px] h-[380px] rounded-xl" src={service.image} alt={service.title} />
-                                <h2 className="text-2xl my-3 font-semibold">{service?.title}</h2>
-                                <p>{service?.description}</p>
+                    services.map((service, index) => (
+                        <Grid item xs={12} sm={6} md={4} key={index}>
+                            <Box className="cursor-pointer">
+                                <Image className="w-full h-auto rounded-xl transition duration-300 ease-in-out hover:scale-105" src={service.image} alt={service.title} />
+                                <Typography variant="h5" className="my-4 font-semibold">{service.title}</Typography>
+                                <Typography variant="body1">{service.description}</Typography>
                                 <button className="mt-4 mb-14 hover:text-red-900">Learn More <EastIcon /></button>
-                            </div>
-                        )
-                    })
+                            </Box>
+                        </Grid>
+                    ))
                 }
-            </div>
+            </Grid>
             <hr />
-            <div className="grid grid-cols-4 gap-3 my-4">
-                <div className="flex flex-col justify-center text-center gap-3 shadow-xl p-14 rounded-2xl border-2">
-                    <h2 className="text-5xl">10+</h2>
-                    <p className="text-xl">Years of Experience</p>
-                </div>
-                <div className="flex flex-col bg-red-900 text-white justify-center text-center gap-3 shadow-xl p-14 rounded-2xl border-2">
-                    <h2 className="text-5xl">4.8/5</h2>
-                    <p className="text-xl">Ratings from Customers</p>
-                </div>
-                <div className="flex flex-col justify-center text-center gap-3 shadow-xl p-14 rounded-2xl border-2">
-                    <h2 className="text-5xl">20+</h2>
-                    <p className="text-xl">Countries Served</p>
-                </div>
-                <div className="flex flex-col justify-center text-center gap-3 shadow-xl p-14 rounded-2xl border-2">
-                    <h2 className="text-5xl">1.3k</h2>
-                    <p className="text-xl">Successful Installations                    </p>
-                </div>
-            </div>
+            <Grid container spacing={3} className="my-4">
+                <Grid item xs={12} sm={6} md={3}>
+                    <Box className="flex flex-col justify-center text-center hover:bg-red-900 transition-all duration-300 ease-in-out hover:text-white gap-3 shadow-xl h-48 rounded-2xl border-2">
+                        <Typography variant="h2">10+</Typography>
+                        <Typography variant="body1" className="text-xl">Years of Experience</Typography>
+                    </Box>
+                </Grid>
+                <Grid item xs={12} sm={6} md={3}>
+                    <Box className="flex flex-col hover:bg-red-900 transition-all duration-300 ease-in-out hover:text-white justify-center text-center gap-3 shadow-xl h-48 rounded-2xl border-2">
+                        <Typography variant="h2">4.8/5</Typography>
+                        <Typography variant="body1" className="text-xl">Ratings from Customers</Typography>
+                    </Box>
+                </Grid>
+                <Grid item xs={12} sm={6} md={3}>
+                    <Box className="flex flex-col justify-center text-center hover:bg-red-900 transition-all duration-300 ease-in-out hover:text-white gap-3 shadow-xl h-48 rounded-2xl border-2">
+                        <Typography variant="h2">20+</Typography>
+                        <Typography variant="body1" className="text-xl">Countries Served</Typography>
+                    </Box>
+                </Grid>
+                <Grid item xs={12} sm={6} md={3}>
+                    <Box className="flex flex-col justify-center text-center hover:bg-red-900 transition-all duration-300 ease-in-out hover:text-white gap-3 shadow-xl h-48 rounded-2xl border-2">
+                        <Typography variant="h2">1.3k</Typography>
+                        <Typography variant="body1" className="text-xl">Successful Installations</Typography>
+                    </Box>
+                </Grid>
+            </Grid>
         </Container>
     );
 };

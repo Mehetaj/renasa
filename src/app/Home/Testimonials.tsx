@@ -44,10 +44,9 @@ const Testimonials = () => {
     return (
         <Container>
             <div className="text-center mt-20">
-                <p className="capitalize text-red-900"> <WbSunnyIcon /> TESTIMONIALS</p>
-                <h2 className="text-6xl my-5">Happy Customers, <br /> Happy World</h2>
+                <h2 className="text-4xl md:text-6xl my-5">Happy Customers, <br /> Happy World</h2>
             </div>
-            <div className='my-10 grid grid-cols-3 gap-5'>
+            <div className='my-10 grid md:grid-cols-2 lg:grid-cols-3 justify-center gap-5'>
                 {
                     datas?.map((data, index) => {
                         return (

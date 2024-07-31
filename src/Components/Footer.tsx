@@ -52,7 +52,7 @@ const Footer = () => {
                             Subscribe to our newsletter to stay up-to-date with the latest news, tips, and trends in the industry
                         </Typography>
                         <Box component="form" sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
-                            <TextField label="Your Email" variant="outlined" size="small" />
+                            <TextField label="Your Email" variant="outlined"  size="small" />
                             <Button
                         variant='contained'
                         sx={{ paddingX: "20px", paddingY: "10px", display: 'flex', gap: '10px' }}

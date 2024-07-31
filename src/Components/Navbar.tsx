@@ -13,7 +13,7 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 
-const pages = ['Products', 'Systems', 'Equipments','Industry','About', 'Blog'];
+const pages = ['About Us', 'Services', 'Projects', 'Gallary', 'Contact', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function Navbar() {
@@ -113,7 +113,7 @@ function Navbar() {
                 >
                     SUBSTATION
                 </Typography>
-                <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex', justifyContent:'center' } }}>
+                <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex', justifyContent: 'center' } }}>
                     {pages.map((page) => (
                         <Button
                             key={page}

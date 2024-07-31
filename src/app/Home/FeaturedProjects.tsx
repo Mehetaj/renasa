@@ -41,9 +41,8 @@ const FeaturedProjects = () => {
 
     return (
         <Container>
-            <div className="mt-24 flex justify-between items-start">
-                <div className="flex flex-col gap-6">
-                <Typography variant="h6" color="firebrick" fontWeight="fontWeightBold"><WbSunnyIcon /> PORTFOLIO</Typography>
+            <div className="mt-24 md:flex justify-between items-start">
+                <div className="">
                 <Typography variant="h2" gutterBottom>Recent Projects</Typography>
                 </div>
                 <Button variant='contained' sx={{ paddingX: "20px", paddingY: "10px", display:'flex', gap:'10px' }} color="error">
