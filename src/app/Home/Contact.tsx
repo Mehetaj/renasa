@@ -10,7 +10,7 @@ const Contact = () => {
         <Container>
             <Grid container spacing={5} alignItems="center" mt={6}>
                 <Grid item xs={12} md={6}>
-                    <Typography className='my-4' variant="h2" gutterBottom>
+                    <Typography className='my-4 text-3xl md:text-6xl' gutterBottom>
                         Join the Clean Energy Revolution Today!
                     </Typography>
                     <Typography className='text-xl' variant="body1" gutterBottom>

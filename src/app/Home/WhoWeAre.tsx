@@ -29,7 +29,7 @@ const WhoWeAre: React.FC = () => {
                 <div style={{
                     width: isTabletOrLarger ? '50%' : '100%',
                 }}>
-                    <Typography variant="h2" gutterBottom>Building a Brighter <br /> Future, Together</Typography>
+                    <p className="text-3xl md:text-6xl">Building a Brighter <br /> Future, Together</p>
                     <Typography className='text-xl my-10' variant="body1" gutterBottom>
                         At Renasa, we believe in the power of renewable energy to create a more sustainable future. With a passion for clean energy and a commitment to our customers, we are dedicated to delivering the best possible solutions.
                     </Typography>

@@ -43,7 +43,7 @@ const FeaturedProjects = () => {
         <Container>
             <div className="mt-24 md:flex justify-between items-start">
                 <div className="">
-                <Typography variant="h2" gutterBottom>Recent Projects</Typography>
+                <p className="text-3xl md:text-6xl mb-4 md:mb-0">Recent Projects</p>
                 </div>
                 <Button variant='contained' sx={{ paddingX: "20px", paddingY: "10px", display:'flex', gap:'10px' }} color="error">
                     Explore More <EastIcon />

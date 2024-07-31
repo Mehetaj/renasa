@@ -35,7 +35,7 @@ const OurServices = () => {
     return (
         <Container>
             <Box className="text-center mt-10">
-                <Typography variant={isMobile ? "h4" : (isTablet ? "h2" : "h2")}  className="my-5">Comprehensive Renewable <br /> Energy Solutions</Typography>
+                <Typography variant={isMobile ? "h5" : (isTablet ? "h2" : "h2")}  className="my-5">Comprehensive Renewable <br /> Energy Solutions</Typography>
                 <Typography variant="body1" className="text-xl">
                     We offer a range of services to help you take advantage of renewable energy <br /> and reduce your carbon footprint.
                 </Typography>
