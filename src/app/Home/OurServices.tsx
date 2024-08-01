@@ -35,13 +35,13 @@ const OurServices = () => {
 
     return (
         <Container>
-            <Box data-aos="zoom-in-up" className="text-center mt-10">
+            <Box className="text-center mt-10">
                 <Typography variant={isMobile ? "h5" : (isTablet ? "h2" : "h2")} className="my-5">Comprehensive Renewable <br /> Energy Solutions</Typography>
                 <Typography variant="body1" className="text-xl">
                     We offer a range of services to help you take advantage of renewable energy <br /> and reduce your carbon footprint.
                 </Typography>
             </Box>
-            <Grid data-aos="zoom-in-up" container spacing={3} className="mt-10">
+            <Grid container spacing={3} className="mt-10">
                 {
                     services.map((service, index) => (
                         <Grid item xs={12} sm={6} md={4} key={index}>

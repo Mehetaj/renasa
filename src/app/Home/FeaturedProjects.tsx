@@ -50,7 +50,7 @@ const FeaturedProjects = () => {
                 </Button>
             </div>
             <Box sx={{ flexGrow: 1, my: 5 }}>
-                <Grid data-aos="zoom-in-up" container spacing={2}>
+                <Grid container spacing={2}>
                     {/* Top row: 2 images */}
                     {topRowProjects.map((project, index) => (
                         <Grid item xs={12} md={6} key={index}>
@@ -67,7 +67,7 @@ const FeaturedProjects = () => {
 
                     {/* Bottom row: 3 images */}
                     {bottomRowProjects.map((project, index) => (
-                        <Grid data-aos="zoom-in-up"  item xs={12} md={4} key={index}>
+                        <Grid  item xs={12} md={4} key={index}>
                             <Image
                                 src={project.image}
                                 alt={project.title}

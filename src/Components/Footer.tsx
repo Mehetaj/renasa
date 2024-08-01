@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Grid, Typography, TextField, Button, Box } from '@mui/material';
 import Image from 'next/image';
-import renasa_logo from '@/Images/logo/Renasa-Logo.jpg';
+import renasa_logo from '@/Images/logo/logo.jpg';
 import EastIcon from '@mui/icons-material/East';
 
 
@@ -13,12 +13,7 @@ const Footer = () => {
                     <Grid item xs={12} md={3}>
                         <Grid item xs={12} sm="auto" container alignItems="center" spacing={1}>
                             <Grid item>
-                                <Image src={renasa_logo} alt="Renasa Logo" width={56} height={56} />
-                            </Grid>
-                            <Grid item>
-                                <Typography variant="h6" component="div" sx={{ fontWeight: 'bold', textAlign: { xs: 'center', sm: 'left' } }}>
-                                    <span style={{ color: 'firebrick' }}>Renasa</span> <br /> Corporation
-                                </Typography>
+                                <Image src={renasa_logo} alt="Renasa Logo" width={200} height={200} />
                             </Grid>
                         </Grid>
                         <Typography variant="body1" paragraph>

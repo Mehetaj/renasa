@@ -11,7 +11,7 @@ import LinkedinIcon from '@mui/icons-material/LinkedIn';
 import CallIcon from '@mui/icons-material/Call';
 import MailIcon from '@mui/icons-material/Mail';
 import Link from 'next/link';
-import renasa_logo from '@/Images/logo/Renasa-Logo.jpg';
+import renasa_logo from '@/Images/logo/logo.jpg';
 
 const TopNavBar: React.FC = () => {
   return (
@@ -20,12 +20,7 @@ const TopNavBar: React.FC = () => {
         <Grid container alignItems="center" justifyContent="space-between">
           <Grid item xs={12} sm="auto" container alignItems="center" spacing={1}>
             <Grid item>
-              <Image src={renasa_logo} alt="Renasa Logo" width={56} height={56} />
-            </Grid>
-            <Grid item>
-              <Typography variant="h6" component="div" sx={{ fontWeight: 'bold', textAlign: { xs: 'center', sm: 'left' } }}>
-                <span style={{ color: 'firebrick' }}>Renasa</span> <br /> Corporation
-              </Typography>
+              <Image src={renasa_logo} alt="Renasa Logo" width={150} height={150} />
             </Grid>
           </Grid>
           <Grid item xs={12} sm="auto" container justifyContent={{ xs: 'center', sm: 'flex-end' }}>
