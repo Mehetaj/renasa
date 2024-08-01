@@ -14,23 +14,23 @@ const FeaturedProjects = () => {
     const projects = [
         {
             image: image1,
-            title:""
+            title: ""
         },
         {
             image: image2,
-            title:""
+            title: ""
         },
         {
             image: image3,
-            title:""
+            title: ""
         },
         {
             image: image4,
-            title:""
+            title: ""
         },
         {
             image: image5,
-            title:""
+            title: ""
         },
     ];
 
@@ -43,43 +43,43 @@ const FeaturedProjects = () => {
         <Container>
             <div className="mt-24 md:flex justify-between items-start">
                 <div className="">
-                <p className="text-3xl md:text-6xl mb-4 md:mb-0">Recent Projects</p>
+                    <p className="text-3xl md:text-6xl mb-4 md:mb-0">Recent Projects</p>
                 </div>
-                <Button variant='contained' sx={{ paddingX: "20px", paddingY: "10px", display:'flex', gap:'10px' }} color="error">
+                <Button variant='contained' sx={{ paddingX: "20px", paddingY: "10px", display: 'flex', gap: '10px' }} color="error">
                     Explore More <EastIcon />
                 </Button>
             </div>
             <Box sx={{ flexGrow: 1, my: 5 }}>
-            <Grid container spacing={2}>
-                {/* Top row: 2 images */}
-                {topRowProjects.map((project, index) => (
-                    <Grid item xs={12} md={6} key={index}>
-                        <Image
-                            src={project.image}
-                            alt={project.title}
-                            layout="responsive"
-                            width={600}
-                            height={400}
-                            className="rounded-2xl"
-                        />
-                    </Grid>
-                ))}
+                <Grid data-aos="zoom-in-up" container spacing={2}>
+                    {/* Top row: 2 images */}
+                    {topRowProjects.map((project, index) => (
+                        <Grid item xs={12} md={6} key={index}>
+                            <Image
+                                src={project.image}
+                                alt={project.title}
+                                layout="responsive"
+                                width={600}
+                                height={400}
+                                className="rounded-2xl"
+                            />
+                        </Grid>
+                    ))}
 
-                {/* Bottom row: 3 images */}
-                {bottomRowProjects.map((project, index) => (
-                    <Grid item xs={12} md={4} key={index}>
-                        <Image
-                            src={project.image}
-                            alt={project.title}
-                            layout="responsive"
-                            width={400}
-                            height={300}
-                            className="rounded-2xl"
-                        />
-                    </Grid>
-                ))}
-            </Grid>
-        </Box>
+                    {/* Bottom row: 3 images */}
+                    {bottomRowProjects.map((project, index) => (
+                        <Grid data-aos="zoom-in-up"  item xs={12} md={4} key={index}>
+                            <Image
+                                src={project.image}
+                                alt={project.title}
+                                layout="responsive"
+                                width={400}
+                                height={300}
+                                className="rounded-2xl"
+                            />
+                        </Grid>
+                    ))}
+                </Grid>
+            </Box>
         </Container>
     );
 };

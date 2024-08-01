@@ -17,7 +17,7 @@ const WhoWeAre: React.FC = () => {
                 gap: '24px',
                 width: '100%'
             }}>
-                <div style={{
+                <div data-aos="fade-up-right" style={{
                     display: 'flex',
                     flexDirection: 'column',
                     gap: '10px',
@@ -26,7 +26,7 @@ const WhoWeAre: React.FC = () => {
                     <Image className='rounded-2xl' src={image1} alt="" />
                     <Image className='rounded-2xl' src={image2} alt="" />
                 </div>
-                <div style={{
+                <div data-aos="fade-up-left" style={{
                     width: isTabletOrLarger ? '50%' : '100%',
                 }}>
                     <p className="text-3xl md:text-6xl">Building a Brighter <br /> Future, Together</p>

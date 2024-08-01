@@ -6,6 +6,7 @@ import image2 from '@/Images/home_services/image2.jpg';
 import image3 from '@/Images/home_services/image3.jpg';
 import Image from "next/image";
 import EastIcon from '@mui/icons-material/East';
+import AnimateValue from "@/Components/AnimateValue";
 
 const OurServices = () => {
 
@@ -34,13 +35,13 @@ const OurServices = () => {
 
     return (
         <Container>
-            <Box className="text-center mt-10">
-                <Typography variant={isMobile ? "h5" : (isTablet ? "h2" : "h2")}  className="my-5">Comprehensive Renewable <br /> Energy Solutions</Typography>
+            <Box data-aos="zoom-in-up" className="text-center mt-10">
+                <Typography variant={isMobile ? "h5" : (isTablet ? "h2" : "h2")} className="my-5">Comprehensive Renewable <br /> Energy Solutions</Typography>
                 <Typography variant="body1" className="text-xl">
                     We offer a range of services to help you take advantage of renewable energy <br /> and reduce your carbon footprint.
                 </Typography>
             </Box>
-            <Grid container spacing={3} className="mt-10">
+            <Grid data-aos="zoom-in-up" container spacing={3} className="mt-10">
                 {
                     services.map((service, index) => (
                         <Grid item xs={12} sm={6} md={4} key={index}>
@@ -58,7 +59,7 @@ const OurServices = () => {
             <Grid container spacing={3} className="my-4">
                 <Grid item xs={12} sm={6} md={3}>
                     <Box className="flex flex-col justify-center text-center hover:bg-red-900 transition-all duration-300 ease-in-out hover:text-white gap-3 shadow-xl h-48 rounded-2xl border-2">
-                        <Typography variant="h2">10+</Typography>
+                        <AnimateValue start={0} end={10} duration={1000}/>
                         <Typography variant="body1" className="text-xl">Years of Experience</Typography>
                     </Box>
                 </Grid>
@@ -70,13 +71,13 @@ const OurServices = () => {
                 </Grid>
                 <Grid item xs={12} sm={6} md={3}>
                     <Box className="flex flex-col justify-center text-center hover:bg-red-900 transition-all duration-300 ease-in-out hover:text-white gap-3 shadow-xl h-48 rounded-2xl border-2">
-                        <Typography variant="h2">20+</Typography>
+                    <AnimateValue start={0} end={20} duration={1000}/>
                         <Typography variant="body1" className="text-xl">Countries Served</Typography>
                     </Box>
                 </Grid>
                 <Grid item xs={12} sm={6} md={3}>
                     <Box className="flex flex-col justify-center text-center hover:bg-red-900 transition-all duration-300 ease-in-out hover:text-white gap-3 shadow-xl h-48 rounded-2xl border-2">
-                        <Typography variant="h2">1.3k</Typography>
+                    <AnimateValue start={0} end={1300} duration={1000}/>
                         <Typography variant="body1" className="text-xl">Successful Installations</Typography>
                     </Box>
                 </Grid>
