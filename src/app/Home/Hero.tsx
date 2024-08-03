@@ -1,14 +1,10 @@
 "use client"
-import React, { useRef, useState } from 'react';
-// Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import 'swiper/css/effect-coverflow';
-// import required modules
-import { Autoplay, Pagination, Navigation, EffectCoverflow } from 'swiper/modules';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import img1 from '@/Images/hero/image1.jpg';
 import img2 from '@/Images/hero/image2.jpg';
 import img3 from '@/Images/hero/image3.jpg';
@@ -26,15 +22,6 @@ const Hero = () => {
     return (
         <>
             <Swiper
-                effect={'coverflow'}
-                grabCursor={true}
-                coverflowEffect={{
-                    rotate: 50,
-                    stretch: 0,
-                    depth: 100,
-                    modifier: 1,
-                    slideShadows: true,
-                }}
                 spaceBetween={30}
                 centeredSlides={true}
                 autoplay={{
@@ -45,12 +32,12 @@ const Hero = () => {
                     clickable: true,
                 }}
                 navigation={true}
-                modules={[Autoplay, Pagination, Navigation, EffectCoverflow]}
+                modules={[Autoplay, Pagination, Navigation]}
                 className="mySwiper"
             >
                 {images.map((image, index) => (
                     <SwiperSlide key={index}>
-                        <Image className='h-[650px] w-full' src={image} alt={`Slide ${index + 1}`} />
+                        <Image className=' w-full' src={image} alt={`Slide ${index + 1}`} />
                     </SwiperSlide>
                 ))}
             </Swiper>
