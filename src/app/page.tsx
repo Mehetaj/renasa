@@ -9,7 +9,7 @@ import WhoWeAre from './Home/WhoWeAre';
 export default function Home() {
   return (
     <main>
-      {/* <Hero /> */}
+      <Hero />
       <WhoWeAre />
       <OurServices />
       <FeaturedProjects />

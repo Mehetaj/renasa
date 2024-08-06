@@ -8,7 +8,7 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedinIcon from '@mui/icons-material/LinkedIn';
 import CallIcon from '@mui/icons-material/Call';
 import MailIcon from '@mui/icons-material/Mail';
-import { Button } from '@mui/material';
+import { Button, IconButton } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { useState } from 'react';
 
@@ -20,8 +20,10 @@ function Navbar() {
   };
 
   return (
-    <div className="flex items-center justify-between px-5 py-2 bg-white shadow-lg z-50">
-      <Image className='' width={180} height={180} src={renasa_logo} alt="Renasa Logo" />
+    <div className="relative flex items-center justify-between px-5 py-2 bg-white shadow-lg z-50">
+      <Link href="/">
+        <Image width={180} height={180} src={renasa_logo} alt="Renasa Logo" />
+      </Link>
       <div className="hidden lg:flex gap-6">
         <Link href="/">Home</Link>
         <Link href="/about">About</Link>
@@ -41,9 +43,9 @@ function Navbar() {
         <Button variant='contained' color='error'>Login</Button>
       </div>
       <div className="lg:hidden flex items-center">
-        <button onClick={handleToggle}>
+        <IconButton onClick={handleToggle}>
           <MenuIcon />
-        </button>
+        </IconButton>
       </div>
       {isOpen && (
         <div className="absolute top-20 left-0 right-0 bg-white shadow-lg p-5 flex flex-col items-start lg:hidden">
